@@ -101,7 +101,7 @@ class OpenAI extends AbstractProvider {
      * value, even 0 or 1, and only accept the platform default.
      */
     private static function model_uses_default_temperature(string $model): bool {
-        return (bool) preg_match('/^(?:o\d(?:-|$)|gpt-5(?:-|$))/i', $model);
+        return (bool) preg_match('/^(?:o\d(?:[-.]|$)|gpt-5(?:[-.]|$))/i', $model);
     }
 
     /**
